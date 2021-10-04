@@ -15,13 +15,15 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { motion, AnimatePresence } from "framer-motion";
 
 import { ColorModeContext } from "../../plugins/gatsby-plugin-top-layout/TopLayout";
+import useWindowDimensions from "./../components/useWindowDimensions";
 
 export default function Header() {
-    const [isDesktop, setDesktop] = React.useState(window.innerWidth > 599);
+    const { winHeight, winWidth } = useWindowDimensions();
+    const [isDesktop, setDesktop] = React.useState(winWidth > 599);
     const [isLogoHover, setIsLogoHover] = React.useState(false);
     const [isAboutHover, setIsAboutHover] = React.useState(false);
     const updateMedia = () => {
-        setDesktop(window.innerWidth > 599);
+        setDesktop(winWidth > 599);
     };
     React.useEffect(() => {
         window.addEventListener("resize", updateMedia);
