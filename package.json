@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-rendering-modes",
+  "name": "portfolio-with-gatsbyjs",
   "private": true,
   "version": "1.0.0",
-  "description": "A Gatsby starter to demonstrate new rendering modes in Gatsby 4",
+  "description": "Gatsby 4",
   "main": "index.js",
   "scripts": {
     "start": "gatsby develop",
@@ -13,9 +13,23 @@
   "author": "Brent Jackson <jxnblk@gmail.com>",
   "license": "0BSD",
   "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/material": "latest",
+    "framer-motion": "^4.1.17",
     "gatsby": "^4.0.0-zz-next.1",
+    "gatsby-plugin-react-helmet": "latest",
+    "gatsby-plugin-sass": "^4.14.0",
     "node-fetch": "^2.6.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "latest",
+    "react-dom": "latest",
+    "react-helmet": "latest",
+    "react-intersection-observer": "^8.32.1",
+    "sass": "^1.42.1"
+  },
+  "devDependencies": {
+    "resize-observer-polyfill": "^1.5.1"
   }
 }
