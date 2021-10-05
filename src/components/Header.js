@@ -20,6 +20,7 @@ import useWindowDimensions from "./../components/useWindowDimensions";
 
 export default function Header() {
     const { winHeight, winWidth } = useWindowDimensions();
+    // const [ winHeight, setWinHeight ] = React.useState(useWindowDimensions();
     const [isDesktop, setDesktop] = React.useState(winWidth > 599);
     const [isLogoHover, setIsLogoHover] = React.useState(false);
     const [isAboutHover, setIsAboutHover] = React.useState(false);
@@ -27,9 +28,12 @@ export default function Header() {
         setDesktop(winWidth > 599);
     };
     React.useEffect(() => {
-        window.addEventListener("resize", updateMedia);
-        return () => window.removeEventListener("resize", updateMedia);
+        updateMedia();
     });
+    // React.useEffect(() => {
+    //     window.addEventListener("resize", updateMedia);
+    //     return () => window.removeEventListener("resize", updateMedia);
+    // }, []);
     const theme = useTheme();
     const colorMode = React.useContext(ColorModeContext);
     return (
