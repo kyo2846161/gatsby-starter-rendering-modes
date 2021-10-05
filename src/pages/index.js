@@ -45,6 +45,9 @@ export default function Index() {
   const txt_iDoUX = ["I"," ","d","o"," ","U","I","U","X"," ","d","e","s","i","g","n"];
   return (
     <>
+      {typeof window !== "undefined" ? (
+        <>
+      
       <motion.div style={{x: intro_x, y: intro_y, opacity: intro_opacity, height: winHeight, overflow: "hidden", marginTop: -64, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
         <Typography variant="h3" component="h1">
           {txt_intro.map((item, index) => (
@@ -97,6 +100,8 @@ export default function Index() {
           <div style={{ height: 500 }} /><div style={{ height: 500 }} /><div style={{ height: 500 }} /><div style={{ height: 500 }} /><div style={{ height: 500 }} />
         </Box>
       </Container>
+        </>
+      ) : ""}
     </>
   );
 }
