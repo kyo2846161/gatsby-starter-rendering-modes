@@ -27,13 +27,14 @@ export default function Header() {
     const updateMedia = () => {
         setDesktop(winWidth > 599);
     };
-    React.useEffect(() => {
-        updateMedia();
-    });
     // React.useEffect(() => {
     //     window.addEventListener("resize", updateMedia);
     //     return () => window.removeEventListener("resize", updateMedia);
     // }, []);
+    React.useEffect(() => {
+        updateMedia();
+        // setDesktop(winWidth > 599);
+    }, [winWidth]);
     const theme = useTheme();
     const colorMode = React.useContext(ColorModeContext);
     return (
