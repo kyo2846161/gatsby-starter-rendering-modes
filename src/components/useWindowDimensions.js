@@ -21,5 +21,9 @@ export default function useWindowDimensions() {
     // }
   }, []);
 
+  useEffect(() => {
+    setWindowDimensions(getWindowDimensions());
+  }, []);
+
   return windowDimensions;
 }
