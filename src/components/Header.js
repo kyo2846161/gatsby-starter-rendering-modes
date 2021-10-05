@@ -16,6 +16,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { ColorModeContext } from "../../plugins/gatsby-plugin-top-layout/TopLayout";
 import useWindowDimensions from "./../components/useWindowDimensions";
+// import Media from 'react-media';
 
 export default function Header() {
     const { winHeight, winWidth } = useWindowDimensions();
