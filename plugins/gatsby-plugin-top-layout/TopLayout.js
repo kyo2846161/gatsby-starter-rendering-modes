@@ -6,9 +6,9 @@ import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/s
 // import theme from '../../src/theme';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Header from "../../src/components/Header";
-import "../../src/styles/font.css";
+import "../../src/styles/font.scss";
 import "../../src/fonts/silkserif/stylesheet.css";
-import "../../src/styles/main.css";
+import "../../src/styles/main.scss";
 // import SmoothScroll from '../../src/components/SmoothScroll';
 
 const font =  "'Montserrat', sans-serif";
