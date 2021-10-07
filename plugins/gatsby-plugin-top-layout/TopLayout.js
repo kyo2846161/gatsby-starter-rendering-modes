@@ -16,7 +16,6 @@ const font =  "'Montserrat', sans-serif";
 const serifFont = "'Playfair Display', serif";
 
 export const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
-
 export default function TopLayout(props) {
   
 
@@ -95,10 +94,14 @@ export default function TopLayout(props) {
         <ThemeProvider theme={newTheme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Header />        
-          {/* <SmoothScroll> */}
-            {props.children}
-          {/* </SmoothScroll> */}
+          {typeof window !== "undefined" && (
+            <>
+              <Header />
+              {/* <SmoothScroll> */}
+                {props.children}
+              {/* </SmoothScroll> */}
+            </>
+          )}
         </ThemeProvider>
       </ColorModeContext.Provider>
     </>
