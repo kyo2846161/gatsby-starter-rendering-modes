@@ -13,7 +13,6 @@ const SmoothScroll = ({ children }) => {
 
   // page scrollable height based on content length
   const [pageHeight, setPageHeight] = useState(0)
-
   // update scrollable height when browser is resizing
   const resizePageHeight = useCallback(entries => {
     for (let entry of entries) {
